@@ -1,8 +1,8 @@
-import java.util.*;
+ import java.util.*;
 
 class a3 {
-    public static void main(String[] args) {
-        String s = "()";
+    public void Solve(String s) {
+
         Stack<Integer> st = new Stack<>();
         st.push(-1);
         int max = 0;
@@ -12,7 +12,7 @@ class a3 {
                 st.push(i);
             } else {
                 st.pop();
-                if (st.empty()) {
+                if (st.isEmpty()) {
                     st.push(i);
                 } else {
                     max = Math.max(max, i - st.peek());
@@ -20,8 +20,18 @@ class a3 {
             }
 
         }
-        System.out.print(max);
+        System.out.println(max);
 
     }
 
+}
+
+class main {
+    public static void main(String[] args) {
+        a3 k = new a3();
+        k.Solve("()");
+
+        k.Solve("()())");
+        k.Solve("");
+    }
 }
