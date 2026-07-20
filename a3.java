@@ -1,7 +1,7 @@
  import java.util.*;
 
 class a3 {
-    public void Solve(String s) {
+    public int Solve(String s) {
 
         Stack<Integer> st = new Stack<>();
         st.push(-1);
@@ -20,7 +20,7 @@ class a3 {
             }
 
         }
-        System.out.println(max);
+        return max;
 
     }
 
@@ -29,9 +29,8 @@ class a3 {
 class main {
     public static void main(String[] args) {
         a3 k = new a3();
-        k.Solve("()");
-
-        k.Solve("()())");
-        k.Solve("");
+       System.out.println(k.Solve("()"));
+      System.out.println(k.Solve("(()))"));
+      System.out.println(k.Solve(""));
     }
 }
